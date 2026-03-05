@@ -25,6 +25,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+    namespace 'com.barkibu.add_to_wallet'
     compileSdkVersion 30
 
     sourceSets {
@@ -32,6 +33,15 @@ android {
     }
     defaultConfig {
         minSdkVersion 16
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
+    }
+
+    kotlinOptions {
+        jvmTarget = '21'
     }
 }
 
